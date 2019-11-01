@@ -10,7 +10,7 @@ function App() {
     <Aux>
     <div className="App">
       <Layout>
-        <SongOverview>hh</SongOverview>
+      
       </Layout>
     </div>
     </Aux>
