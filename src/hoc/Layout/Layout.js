@@ -6,8 +6,10 @@ class Layout extends Component {
     render (){
         return (
             <Aux>
-            <div>Tekst uit Layout.js</div>
-            <SongOverview></SongOverview>
+            <div>
+                <h1> Winc Lil'Liedjeslijst</h1>
+            </div>
+            <SongOverview />
             </Aux>
         )
     }

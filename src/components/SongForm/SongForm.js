@@ -1,47 +1,48 @@
 import React, { Component } from 'react';
+import classes from './SongForm.css';
 import Button from './../Button/Button';
 
 class SongForm extends Component {
-    render () {
+    render() {
         return (
-           <div>
-               <input type='text'/> 
-               <input type='text'/> 
-            
-               <select name="genre">
-               <option></option>
-   <option>Soul</option>
-   <option>Jazz</option>
-   <option>Pop</option>
-   <option>Rock</option>
-  </select>
-  <select name="rating">
-   <option></option>
-   <option>1</option>
-   <option>2</option>
-   <option>3</option>
-   <option>4</option>
-   <option>5</option>
-  </select>
-  <Button />
+            <div className="song-form">
+                <table className="song-form-table">
+                    <tr>
+                        <td><input className="song-form-items" type="text" /></td>
+                        <td><input  className="song-form-items" type="text" /></td>
+                        <td><select className="song-form-items"  name="Genre" widt="100%">
+                            <option value="Rock">Rock</option>
+                            <option value="Jazz">Jazz</option>
+                            <option value="Pop">Classic</option>
+                            <option value="Other">Other</option>
+                            </select> 
+                        </td>
 
-
-           </div> 
-        )
-
-    }
-} 
-
-
-
-
-
-
-
-
-
-
-
-
-
+                        <td><select className="song-form-items" name="Rating" widt="100%">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            </select> </td>
+                        <td> <Button /></td>
+                    </tr>
+                </table>
+            </div>
+                )
+            }
+        } 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 export default SongForm;

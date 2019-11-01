@@ -50,7 +50,22 @@ class SongOverview extends Component {
     ] }; 
 
     addSong = (song) => {
-              // doe iets om de state aan te passen
+        // doe iets om de state aan te passen
+        const songToAdd = {
+          number: '10',
+          name: 'pppp',
+          artist: 'bbbb',
+          genre: 'pppp',
+          rate: '1111'
+        }
+        const currentStat = this.state;
+        this.setState({
+          currentStat: this.state.songs.push(songToAdd)
+  
+        })
+        // let extraSong = this.state.songs[3].artist;
+        // console.log(extraSong);
+        
     }
   
     render() {
@@ -81,20 +96,14 @@ class SongOverview extends Component {
                     
             </table>
                 <SongList songs={this.state.songs}/>
+                {/* oefenbutton om tekst te uploaden  */}
+                <input type='button' value='Voeg toe' onClick={this.addSong} />
            
             
               
             </div>
 
-            <div>
-                <hr />
-                <hr />
-                <hr />
-                <hr />
-          
-                <span>{this.state.songs[0].id}</span>   
-                <span>{this.state.songs[0].song}</span>    
-                <span>{this.state.songs[0].artist}</span>               
+            <div>         
             </div>
         </Aux>
       );
